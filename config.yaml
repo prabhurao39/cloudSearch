@@ -1,0 +1,31 @@
+awsFactory:
+  awsAccessKeyId: ""
+  awsSecretKey: ""
+  awsRegion: "us-east-1"
+
+sqsEventNotifierName: "S3EventNotifier"
+
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      logFormat: "%-5level [%date{ISO8601}] %c:%method:%line- %msg%n"
+      threshold: ALL
+    - type: file
+      threshold: ALL
+      logFormat: "%-5level [%date{ISO8601}] %c:%method:%line- %msg%n"
+      includeCallerData: true
+      currentLogFilename: cloudsearch/app.log
+      archivedLogFilenamePattern: cloudsearch/app-%d{yyyy-MM-dd}-%i.log.gz
+      archivedFileCount: 3
+      maxFileSize: 20MiB
+  loggers:
+    com.bazaarvoice.adaptor: INFO
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8090
+  adminConnectors:
+    - type: http
+      port: 8091
