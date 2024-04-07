@@ -1,6 +1,6 @@
-# cloud search
+# cloud search 
 
-**Design & build application that search documents in cloud storage** 
+**Design & build application that updates and search documents in ES for any changes in S3** 
 
 
 **Requirements**
