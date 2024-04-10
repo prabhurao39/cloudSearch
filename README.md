@@ -32,7 +32,7 @@ http://localhost:8091/healthcheck
 
 
 **Deployment**
-Fargate (for uneven load) & CDK
+Fargate / EC2 & CDK
 
 **Logging**
 Kibana
