@@ -1,6 +1,6 @@
 # cloud search 
 
-**Design & build application that can search documents from a cloud storage service like Dropbox or Google Drive or S3 on the content inside the document.** 
+**An application that can search documents from a cloud storage service like Dropbox or Google Drive or S3 on the content inside the document.** 
 
 
 **Requirements**
