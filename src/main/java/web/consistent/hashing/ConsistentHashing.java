@@ -7,6 +7,13 @@ import java.util.*;
 
 public class ConsistentHashing {
     private final TreeMap<Long, String> ring;
+
+    /** The top portion of the graphic shows a cluster without vnodes.
+        In the single-token architecture paradigm, each node is assigned a single token that represents a location in the ring.
+        Each node stores data determined by mapping the partition key to a token value within a range from the previous node to its assigned value.
+        Each node also contains copies of each row from other nodes in the cluster.
+        For example, if the replication factor is 3, range E replicates to nodes 5, 6, and 1.
+        A node owns exactly one contiguous partition range in the ring space. */
     private final int numberOfReplicas;
     private final MessageDigest md;
 
